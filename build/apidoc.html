@@ -1,0 +1,1440 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/anseki/readline-sync"
+
+    >readline-sync (v1.4.7)</a>
+</h1>
+<h4>Synchronous Readline for interactively running to have a conversation with the user via a console(TTY).</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.readline-sync">module readline-sync</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.readline-sync._DBG_clearHistory">
+            function <span class="apidocSignatureSpan">readline-sync.</span>_DBG_clearHistory
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.readline-sync._DBG_set_checkMethod">
+            function <span class="apidocSignatureSpan">readline-sync.</span>_DBG_set_checkMethod
+            <span class="apidocSignatureSpan">(val)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.readline-sync._DBG_set_checkOptions">
+            function <span class="apidocSignatureSpan">readline-sync.</span>_DBG_set_checkOptions
+            <span class="apidocSignatureSpan">(val)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.readline-sync._DBG_set_useExt">
+            function <span class="apidocSignatureSpan">readline-sync.</span>_DBG_set_useExt
+            <span class="apidocSignatureSpan">(val)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.readline-sync.getRawInput">
+            function <span class="apidocSignatureSpan">readline-sync.</span>getRawInput
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.readline-sync.keyIn">
+            function <span class="apidocSignatureSpan">readline-sync.</span>keyIn
+            <span class="apidocSignatureSpan">(query, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.readline-sync.keyInPause">
+            function <span class="apidocSignatureSpan">readline-sync.</span>keyInPause
+            <span class="apidocSignatureSpan">(query, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.readline-sync.keyInSelect">
+            function <span class="apidocSignatureSpan">readline-sync.</span>keyInSelect
+            <span class="apidocSignatureSpan">(items, query, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.readline-sync.keyInYN">
+            function <span class="apidocSignatureSpan">readline-sync.</span>keyInYN
+            <span class="apidocSignatureSpan">(query, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.readline-sync.keyInYNStrict">
+            function <span class="apidocSignatureSpan">readline-sync.</span>keyInYNStrict
+            <span class="apidocSignatureSpan">(query, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.readline-sync.prompt">
+            function <span class="apidocSignatureSpan">readline-sync.</span>prompt
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.readline-sync.promptCL">
+            function <span class="apidocSignatureSpan">readline-sync.</span>promptCL
+            <span class="apidocSignatureSpan">(commandHandler, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.readline-sync.promptCLLoop">
+            function <span class="apidocSignatureSpan">readline-sync.</span>promptCLLoop
+            <span class="apidocSignatureSpan">(commandHandler, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.readline-sync.promptLoop">
+            function <span class="apidocSignatureSpan">readline-sync.</span>promptLoop
+            <span class="apidocSignatureSpan">(inputHandler, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.readline-sync.promptSimShell">
+            function <span class="apidocSignatureSpan">readline-sync.</span>promptSimShell
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.readline-sync.question">
+            function <span class="apidocSignatureSpan">readline-sync.</span>question
+            <span class="apidocSignatureSpan">(query, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.readline-sync.questionEMail">
+            function <span class="apidocSignatureSpan">readline-sync.</span>questionEMail
+            <span class="apidocSignatureSpan">(query, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.readline-sync.questionFloat">
+            function <span class="apidocSignatureSpan">readline-sync.</span>questionFloat
+            <span class="apidocSignatureSpan">(query, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.readline-sync.questionInt">
+            function <span class="apidocSignatureSpan">readline-sync.</span>questionInt
+            <span class="apidocSignatureSpan">(query, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.readline-sync.questionNewPassword">
+            function <span class="apidocSignatureSpan">readline-sync.</span>questionNewPassword
+            <span class="apidocSignatureSpan">(query, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.readline-sync.questionPath">
+            function <span class="apidocSignatureSpan">readline-sync.</span>questionPath
+            <span class="apidocSignatureSpan">(query, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.readline-sync.setBufferSize">
+            function <span class="apidocSignatureSpan">readline-sync.</span>setBufferSize
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.readline-sync.setDefaultOptions">
+            function <span class="apidocSignatureSpan">readline-sync.</span>setDefaultOptions
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.readline-sync.setEncoding">
+            function <span class="apidocSignatureSpan">readline-sync.</span>setEncoding
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.readline-sync.setMask">
+            function <span class="apidocSignatureSpan">readline-sync.</span>setMask
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.readline-sync.setPrint">
+            function <span class="apidocSignatureSpan">readline-sync.</span>setPrint
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.readline-sync.setPrompt">
+            function <span class="apidocSignatureSpan">readline-sync.</span>setPrompt
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.readline-sync" id="apidoc.module.readline-sync">module readline-sync</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.readline-sync._DBG_clearHistory" id="apidoc.element.readline-sync._DBG_clearHistory">
+        function <span class="apidocSignatureSpan">readline-sync.</span>_DBG_clearHistory
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_DBG_clearHistory = function () { lastInput = &#x27;&#x27;; inputHistory = []; }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.readline-sync._DBG_set_checkMethod" id="apidoc.element.readline-sync._DBG_set_checkMethod">
+        function <span class="apidocSignatureSpan">readline-sync.</span>_DBG_set_checkMethod
+        <span class="apidocSignatureSpan">(val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_DBG_set_checkMethod = function (val) { _DBG_checkMethod = val; }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.readline-sync._DBG_set_checkOptions" id="apidoc.element.readline-sync._DBG_set_checkOptions">
+        function <span class="apidocSignatureSpan">readline-sync.</span>_DBG_set_checkOptions
+        <span class="apidocSignatureSpan">(val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_DBG_set_checkOptions = function (val) { _DBG_checkOptions = val; }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.readline-sync._DBG_set_useExt" id="apidoc.element.readline-sync._DBG_set_useExt">
+        function <span class="apidocSignatureSpan">readline-sync.</span>_DBG_set_useExt
+        <span class="apidocSignatureSpan">(val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_DBG_set_useExt = function (val) { _DBG_useExt = val; }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.readline-sync.getRawInput" id="apidoc.element.readline-sync.getRawInput">
+        function <span class="apidocSignatureSpan">readline-sync.</span>getRawInput
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getRawInput = function () { return rawInput; }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+
+See also [`limit` option for `keyIn*` method](#basic_options-limit-for_keyin_method).
+
+## Special method `getRawInput`
+
+```js
+rawInput = readlineSync.<span class="apidocCodeKeywordSpan">getRawInput</span>()
+```
+
+Return a raw input data of last method.
+When the input was terminated with no data, a `NULL` is inserted to the data.
+
+This might contain control-codes (e.g. `LF`, `CR`, `EOF`, etc.), therefore, it might be used to get `^D` that was input. But you
+ should understand each environments for that. Or, **you should not use this** if your script is used in multiple environments.
+For example, when the user input `EOF` (`^D` in Unix like system, `^Z` in Windows), `x1A` (`EOF`) is returned in Windows, and `x00
+` (`NULL`) is returned in Unix like system. And `x04` (`EOT`) is returned in Unix like system with raw-mode. And also, when [external
+ program](#note-reading_by_external_program) is used, nothing is returned. See also [Control characters](#note-control_characters
+).
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.readline-sync.keyIn" id="apidoc.element.readline-sync.keyIn">
+        function <span class="apidocSignatureSpan">readline-sync.</span>keyIn
+        <span class="apidocSignatureSpan">(query, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">keyIn = function (query, options) {
+<span class="apidocCodeCommentSpan">  /* eslint-disable key-spacing */
+</span>  var readOptions = margeOptions(margeOptions(true, options), {
+    display:            query,
+    keyIn:              true,
+    keepWhitespace:     true
+  });
+  /* eslint-enable key-spacing */
+
+  // char list
+  readOptions.limitSrc = readOptions.limit.filter(function(value) {
+    var type = typeof value;
+    return type === &#x27;string&#x27; || type === &#x27;number&#x27;;
+  })
+  .map(function(text) { return replacePlaceholder(text + &#x27;&#x27;, getPhCharlist); });
+  // pattern
+  readOptions.limit = escapePattern(readOptions.limitSrc.join(&#x27;&#x27;));
+
+  [&#x27;trueValue&#x27;, &#x27;falseValue&#x27;].forEach(function(optionName) {
+    readOptions[optionName] = readOptions[optionName].reduce(function(comps, comp) {
+      var type = typeof comp;
+      if (type === &#x27;string&#x27; || type === &#x27;number&#x27;) {
+        comps = comps.concat((comp + &#x27;&#x27;).split(&#x27;&#x27;));
+      } else { comps.push(comp); }
+      return comps;
+    }, []);
+  });
+
+  readOptions.display = replacePlaceholder(readOptions.display + &#x27;&#x27;,
+    function(param) { return getPhContent(param, readOptions); });
+
+  return toBool(_readlineSync(readOptions), readOptions);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  MAX = 60, MIN = 0, value = 30, key;
+console.log(&#x27;\n\n&#x27; + (new Array(20)).join(&#x27; &#x27;) +
+  &#x27;[Z] &#x3c;- -&#x3e; [X]  FIX: [SPACE]\n&#x27;);
+while (true) {
+  console.log(&#x27;\x1B[1A\x1B[K|&#x27; +
+    (new Array(value + 1)).join(&#x27;-&#x27;) + &#x27;O&#x27; +
+    (new Array(MAX - value + 1)).join(&#x27;-&#x27;) + &#x27;| &#x27; + value);
+  key = readlineSync.<span class="apidocCodeKeywordSpan">keyIn</span>(&#x27;&#x27;,
+    {hideEchoBack: true, mask: &#x27;&#x27;, limit: &#x27;zx &#x27;});
+  if (key === &#x27;z&#x27;) { if (value &#x3e; MIN) { value--; } }
+  else if (key === &#x27;x&#x27;) { if (value &#x3c; MAX) { value++; } }
+  else { break; }
+}
+console.log(&#x27;\nA value the user requested: &#x27; + value);
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.readline-sync.keyInPause" id="apidoc.element.readline-sync.keyInPause">
+        function <span class="apidocSignatureSpan">readline-sync.</span>keyInPause
+        <span class="apidocSignatureSpan">(query, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">keyInPause = function (query, options) {
+  if (query == null) { query = &#x27;Continue...&#x27;; }
+  if ((!options || options.guide !== false) &#x26;&#x26; (query += &#x27;&#x27;)) {
+    query = query.replace(/\s+$/, &#x27;&#x27;) + &#x27; (Hit any key)&#x27;;
+  }
+<span class="apidocCodeCommentSpan">  /* eslint-disable key-spacing */
+</span>  exports.keyIn(query, margeOptions({
+    // -------- default
+    limit:              null
+  }, options, {
+    // -------- forced
+    hideEchoBack:       true,
+    mask:               &#x27;&#x27;
+  }));
+  // added:     guide
+  /* eslint-enable key-spacing */
+  return;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+A key other than `Y` and `N` is not accepted. That is, a return value has no default. Therefore, the user has to tell an own wish
+ explicitly. If you want to know a user&#x27;s wish easily, use [`keyInYN`](#utility_methods-keyinyn) method.
+
+This method works same to [`keyInYN`](#utility_methods-keyinyn) method except that this accept only `Y` or `N` key (Therefore, a
+ return value is boolean every time). The options also work same to [`keyInYN`](#utility_methods-keyinyn) method.
+
+### &#x3c;a name=&#x22;utility_methods-keyinpause&#x22;&#x3e;&#x3c;/a&#x3e;`keyInPause`
+
+```js
+readlineSync.<span class="apidocCodeKeywordSpan">keyInPause</span>([query[, options]])
+```
+
+Display a `query` to the user if it&#x27;s specified, and then just wait for a key to be pressed by the user.
+This method works like the `window.alert` method of web browsers. This is used to make the running of script pause and show something
+ to the user, or wait for the user to be ready.
+By default, any key is accepted. You can change this behavior by specifying [`limit`](#basic_options-limit) option  (e.g. accept
+ only a Space Bar).
+
+The `query` is handled the same as that of the [`question`](#basic_methods-question) method.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.readline-sync.keyInSelect" id="apidoc.element.readline-sync.keyInSelect">
+        function <span class="apidocSignatureSpan">readline-sync.</span>keyInSelect
+        <span class="apidocSignatureSpan">(items, query, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">keyInSelect = function (items, query, options) {
+<span class="apidocCodeCommentSpan">  /* eslint-disable key-spacing */
+</span>  var readOptions = margeOptions({
+      // -------- default
+      hideEchoBack:       false
+    }, options, {
+      // -------- forced
+      trueValue:          null,
+      falseValue:         null,
+      caseSensitive:      false,
+      // limit (by items),
+      phContent: function(param) {
+        return param === &#x27;itemsCount&#x27; ? items.length + &#x27;&#x27; :
+          param === &#x27;firstItem&#x27; ? (items[0] + &#x27;&#x27;).trim() :
+          param === &#x27;lastItem&#x27; ? (items[items.length - 1] + &#x27;&#x27;).trim() : null;
+      }
+    }),
+    // added:     guide, cancel
+    keylist = &#x27;&#x27;, key2i = {}, charCode = 49 /* &#x27;1&#x27; */, display = &#x27;\n&#x27;;
+  /* eslint-enable key-spacing */
+  if (!Array.isArray(items) || !items.length || items.length &#x3e; 35) {
+    throw &#x27;`items` must be Array (max length: 35).&#x27;;
+  }
+
+  items.forEach(function(item, i) {
+    var key = String.fromCharCode(charCode);
+    keylist += key;
+    key2i[key] = i;
+    display += &#x27;[&#x27; + key + &#x27;] &#x27; + (item + &#x27;&#x27;).trim() + &#x27;\n&#x27;;
+    charCode = charCode === 57 /* &#x27;9&#x27; */ ? 97 /* &#x27;a&#x27; */ : charCode + 1;
+  });
+  if (!options || options.cancel !== false) {
+    keylist += &#x27;0&#x27;;
+    key2i[&#x27;0&#x27;] = -1;
+    display += &#x27;[0] &#x27; +
+      (options &#x26;&#x26; options.cancel != null &#x26;&#x26; typeof options.cancel !== &#x27;boolean&#x27; ?
+        (options.cancel + &#x27;&#x27;).trim() : &#x27;CANCEL&#x27;) + &#x27;\n&#x27;;
+  }
+  readOptions.limit = keylist;
+  display += &#x27;\n&#x27;;
+
+  if (query == null) { query = &#x27;Choose one from list: &#x27;; }
+  if ((query += &#x27;&#x27;)) {
+    if (!options || options.guide !== false) {
+      query = query.replace(/\s*:?\s*$/, &#x27;&#x27;) + &#x27; [$&#x3c;limit&#x3e;]: &#x27;;
+    }
+    display += query;
+  }
+
+  return key2i[exports.keyIn(display, readOptions).toLowerCase()];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+
+* Let the user choose an item from a list:
+
+```js
+var readlineSync = require(&#x27;readline-sync&#x27;),
+  animals = [&#x27;Lion&#x27;, &#x27;Elephant&#x27;, &#x27;Crocodile&#x27;, &#x27;Giraffe&#x27;, &#x27;Hippo&#x27;],
+  index = readlineSync.<span class="apidocCodeKeywordSpan">keyInSelect</span>(animals, &#x27;Which animal?&#x27;);
+console.log(&#x27;Ok, &#x27; + animals[index] + &#x27; goes to your room.&#x27;);
+```
+
+```console
+[1] Lion
+[2] Elephant
+[3] Crocodile
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.readline-sync.keyInYN" id="apidoc.element.readline-sync.keyInYN">
+        function <span class="apidocSignatureSpan">readline-sync.</span>keyInYN
+        <span class="apidocSignatureSpan">(query, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">keyInYN = function (query, options) { return _keyInYN(query, options); }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Oh, CookieMonster loves tofu!
+```
+
+* Get the user&#x27;s response by a single key without the Enter key:
+
+```js
+var readlineSync = require(&#x27;readline-sync&#x27;);
+if (readlineSync.<span class="apidocCodeKeywordSpan">keyInYN</span>(&#x27;Do you want this module?&#x27;)) {
+// &#x27;Y&#x27; key was pressed.
+console.log(&#x27;Installing now...&#x27;);
+// Do something...
+} else {
+// Another key was pressed.
+console.log(&#x27;Searching another...&#x27;);
+// Do something...
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.readline-sync.keyInYNStrict" id="apidoc.element.readline-sync.keyInYNStrict">
+        function <span class="apidocSignatureSpan">readline-sync.</span>keyInYNStrict
+        <span class="apidocSignatureSpan">(query, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">keyInYNStrict = function (query, options) { return _keyInYN(query, options, &#x27;yn&#x27;); }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Do you like me? [y/n]: y
+Really? [y/n]: y
+```
+
+### &#x3c;a name=&#x22;utility_methods-keyinynstrict&#x22;&#x3e;&#x3c;/a&#x3e;`keyInYNStrict`
+
+```js
+boolYes = readlineSync.<span class="apidocCodeKeywordSpan">keyInYNStrict</span>([query[, options]])
+```
+
+Display a `query` to the user if it&#x27;s specified, and then accept only `Y` or `N` key, and then return a boolean immediately
+ it was pressed by the user, **without pressing the Enter key**. Note that the user has no chance to change the input.
+This method works like the `window.confirm` method of web browsers. A return value means &#x22;Yes&#x22; or &#x22;No&#x22; the user
+ said. It differ depending on the pressed key:
+
+* `Y`: `true`
+* `N`: `false`
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.readline-sync.prompt" id="apidoc.element.readline-sync.prompt">
+        function <span class="apidocSignatureSpan">readline-sync.</span>prompt
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">prompt = function (options) {
+  var readOptions = margeOptions(true, options);
+  readOptions.display = readOptions.prompt;
+  return getValidLine(readOptions);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  defaultInput: &#x27;firefox&#x27;
+});
+```
+
+### &#x3c;a name=&#x22;basic_methods-prompt&#x22;&#x3e;&#x3c;/a&#x3e;`prompt`
+
+```js
+input = readlineSync.<span class="apidocCodeKeywordSpan">prompt</span>([options])
+```
+
+Display a prompt-sign (see [`prompt`](#basic_options-prompt) option) to the user, and then return the input from the user after
+it has been typed and the Enter key was pressed.
+You can specify an `options` (see [Basic Options](#basic_options)) to control the behavior (e.g. refusing unexpected input, avoiding
+ trimming white spaces, etc.).
+
+For example:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.readline-sync.promptCL" id="apidoc.element.readline-sync.promptCL">
+        function <span class="apidocSignatureSpan">readline-sync.</span>promptCL
+        <span class="apidocSignatureSpan">(commandHandler, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">promptCL = function (commandHandler, options) {
+<span class="apidocCodeCommentSpan">  /* eslint-disable key-spacing */
+</span>  var readOptions = margeOptions({
+      // -------- default
+      hideEchoBack:       false,
+      limitMessage:       &#x27;Requested command is not available.&#x27;,
+      caseSensitive:      false,
+      history:            true
+    }, options),
+      // -------- forced
+      // trueValue, falseValue, keepWhitespace don&#x27;t work.
+      // preCheck, limit (by clHandler)
+    clHandler = getClHandler(commandHandler, readOptions);
+  /* eslint-enable key-spacing */
+  readOptions.limit = clHandler.limit;
+  readOptions.preCheck = clHandler.preCheck;
+  exports.prompt(readOptions);
+  return clHandler.args;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+##### &#x3c;a name=&#x22;utility_methods-questionpath-additional_placeholders-min_max&#x22;&#x3e;&#x3c;/a&#x3e;`min`, `max`
+
+A current value of [`min` and `max`](#utility_methods-questionpath-options-min_max) option.
+
+### &#x3c;a name=&#x22;utility_methods-promptcl&#x22;&#x3e;&#x3c;/a&#x3e;`promptCL`
+
+```js
+argsArray = readlineSync.<span class="apidocCodeKeywordSpan">promptCL</span>([commandHandler[, options]])
+```
+
+Display a prompt-sign (see [`prompt`](#basic_options-prompt) option) to the user, and then consider the input as a command-line
+and parse it, and then return a result after the Enter key was pressed.
+A return value is an Array that includes the tokens that were parsed. It parses the input from the user as the command-line, and
+ it interprets whitespaces, quotes, etc., and it splits it to tokens properly. Usually, a first element of the Array is command-
+name, and remaining elements are arguments.
+
+For example:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.readline-sync.promptCLLoop" id="apidoc.element.readline-sync.promptCLLoop">
+        function <span class="apidocSignatureSpan">readline-sync.</span>promptCLLoop
+        <span class="apidocSignatureSpan">(commandHandler, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">promptCLLoop = function (commandHandler, options) {
+<span class="apidocCodeCommentSpan">  /* eslint-disable key-spacing */
+</span>  var readOptions = margeOptions({
+      // -------- default
+      hideEchoBack:       false,
+      limitMessage:       &#x27;Requested command is not available.&#x27;,
+      caseSensitive:      false,
+      history:            true
+    }, options),
+      // -------- forced
+      // trueValue, falseValue, keepWhitespace don&#x27;t work.
+      // preCheck, limit (by clHandler)
+    clHandler = getClHandler(commandHandler, readOptions);
+  /* eslint-enable key-spacing */
+  readOptions.limit = clHandler.limit;
+  readOptions.preCheck = clHandler.preCheck;
+  while (true) {
+    exports.prompt(readOptions);
+    if (clHandler.hRes) { break; }
+  }
+  return;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+
+![sample](screen_03.gif)
+
+* Handle the commands repeatedly, such as the shell interface:
+
+```js
+readlineSync.<span class="apidocCodeKeywordSpan">promptCLLoop</span>({
+add: function(target, into) {
+  console.log(target + &#x27; is added into &#x27; + into + &#x27;.&#x27;);
+  // Do something...
+},
+remove: function(target) {
+  console.log(target + &#x27; is removed.&#x27;);
+  // Do something...
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.readline-sync.promptLoop" id="apidoc.element.readline-sync.promptLoop">
+        function <span class="apidocSignatureSpan">readline-sync.</span>promptLoop
+        <span class="apidocSignatureSpan">(inputHandler, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">promptLoop = function (inputHandler, options) {
+<span class="apidocCodeCommentSpan">  /* eslint-disable key-spacing */
+</span>  var readOptions = margeOptions({
+    // -------- default
+    hideEchoBack:       false,
+    trueValue:          null,
+    falseValue:         null,
+    caseSensitive:      false,
+    history:            true
+  }, options);
+  /* eslint-enable key-spacing */
+  while (true) { if (inputHandler(exports.prompt(readOptions))) { break; } }
+  return;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+&#x3c;tr&#x3e;&#x3c;td&#x3e;&#x3c;a href=&#x22;#basic_options-prompt&#x22;&#x3e;&#x3c;code&#x3e;prompt&#x3c;/code&#x3e;&#x3c;/a&#
+x3e;&#x3c;/td&#x3e;&#x3c;td&#x3e;&#x3c;a href=&#x22;#basic_options-mask&#x22;&#x3e;&#x3c;code&#x3e;mask&#x3c;/code&#x3e;&#x3c;/a
+&#x3e;&#x3c;/td&#x3e;&#x3c;td&#x3e;&#x3c;a href=&#x22;#basic_options-defaultinput&#x22;&#x3e;&#x3c;code&#x3e;defaultInput&#x3c;/
+code&#x3e;&#x3c;/a&#x3e;&#x3c;/td&#x3e;&#x3c;td&#x3e;&#x3c;a href=&#x22;#basic_options-encoding&#x22;&#x3e;&#x3c;code&#x3e;encoding
+&#x3c;/code&#x3e;&#x3c;/a&#x3e;&#x3c;/td&#x3e;&#x3c;td&#x3e;&#x3c;a href=&#x22;#basic_options-buffersize&#x22;&#x3e;&#x3c;code&#
+x3e;bufferSize&#x3c;/code&#x3e;&#x3c;/a&#x3e;&#x3c;/td&#x3e;&#x3c;/tr&#x3e;
+&#x3c;tr&#x3e;&#x3c;td&#x3e;&#x3c;a href=&#x22;#basic_options-print&#x22;&#x3e;&#x3c;code&#x3e;print&#x3c;/code&#x3e;&#x3c;/a&#x3e
+;&#x3c;/td&#x3e;&#x3c;td&#x3e;&#x3c;a href=&#x22;#basic_options-cd&#x22;&#x3e;&#x3c;code&#x3e;cd&#x3c;/code&#x3e;&#x3c;/a&#x3e;&#
+x3c;/td&#x3e;&#x3c;/tr&#x3e;
+&#x3c;/table&#x3e;
+
+### &#x3c;a name=&#x22;utility_methods-promptloop&#x22;&#x3e;&#x3c;/a&#x3e;`promptLoop`
+
+```js
+readlineSync.<span class="apidocCodeKeywordSpan">promptLoop</span>(inputHandler[, options])
+```
+
+Display a prompt-sign (see [`prompt`](#basic_options-prompt) option) to the user, and then call `inputHandler` function with the
+ input from the user after it has been typed and the Enter key was pressed. Do these repeatedly until `inputHandler` function returns
+ `true`.
+
+For example, the following 2 codes work same:
+
+```js
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.readline-sync.promptSimShell" id="apidoc.element.readline-sync.promptSimShell">
+        function <span class="apidocSignatureSpan">readline-sync.</span>promptSimShell
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">promptSimShell = function (options) {
+<span class="apidocCodeCommentSpan">  /* eslint-disable key-spacing */
+</span>  return exports.prompt(margeOptions({
+    // -------- default
+    hideEchoBack:       false,
+    history:            true
+  }, options, {
+    // -------- forced
+    prompt:             (function() {
+      return IS_WIN ?
+        &#x27;$&#x3c;cwd&#x3e;&#x3e;&#x27; :
+        // &#x27;user@host:cwd$ &#x27;
+        (process.env.USER || &#x27;&#x27;) +
+        (process.env.HOSTNAME ?
+          &#x27;@&#x27; + process.env.HOSTNAME.replace(/\..*$/, &#x27;&#x27;) : &#x27;&#x27;) +
+        &#x27;:$&#x3c;cwdHome&#x3e;$ &#x27;;
+    })()
+  }));
+  /* eslint-enable key-spacing */
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+&#x3c;tr&#x3e;&#x3c;td&#x3e;&#x3c;a href=&#x22;#basic_options-prompt&#x22;&#x3e;&#x3c;code&#x3e;prompt&#x3c;/code&#x3e;&#x3c;/a&#
+x3e;&#x3c;/td&#x3e;&#x3c;td&#x3e;&#x3c;a href=&#x22;#basic_options-mask&#x22;&#x3e;&#x3c;code&#x3e;mask&#x3c;/code&#x3e;&#x3c;/a
+&#x3e;&#x3c;/td&#x3e;&#x3c;td&#x3e;&#x3c;a href=&#x22;#basic_options-defaultinput&#x22;&#x3e;&#x3c;code&#x3e;defaultInput&#x3c;/
+code&#x3e;&#x3c;/a&#x3e;&#x3c;/td&#x3e;&#x3c;td&#x3e;&#x3c;a href=&#x22;#basic_options-encoding&#x22;&#x3e;&#x3c;code&#x3e;encoding
+&#x3c;/code&#x3e;&#x3c;/a&#x3e;&#x3c;/td&#x3e;&#x3c;td&#x3e;&#x3c;a href=&#x22;#basic_options-buffersize&#x22;&#x3e;&#x3c;code&#
+x3e;bufferSize&#x3c;/code&#x3e;&#x3c;/a&#x3e;&#x3c;/td&#x3e;&#x3c;/tr&#x3e;
+&#x3c;tr&#x3e;&#x3c;td&#x3e;&#x3c;a href=&#x22;#basic_options-print&#x22;&#x3e;&#x3c;code&#x3e;print&#x3c;/code&#x3e;&#x3c;/a&#x3e
+;&#x3c;/td&#x3e;&#x3c;td&#x3e;&#x3c;a href=&#x22;#basic_options-cd&#x22;&#x3e;&#x3c;code&#x3e;cd&#x3c;/code&#x3e;&#x3c;/a&#x3e;&#
+x3c;/td&#x3e;&#x3c;/tr&#x3e;
+&#x3c;/table&#x3e;
+
+### &#x3c;a name=&#x22;utility_methods-promptsimshell&#x22;&#x3e;&#x3c;/a&#x3e;`promptSimShell`
+
+```js
+input = readlineSync.<span class="apidocCodeKeywordSpan">promptSimShell</span>([options])
+```
+
+Display a prompt-sign that is similar to that of the user&#x27;s shell to the user, and then return the input from the user after
+ it has been typed and the Enter key was pressed.
+This method displays a prompt-sign like:
+
+On Windows:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.readline-sync.question" id="apidoc.element.readline-sync.question">
+        function <span class="apidocSignatureSpan">readline-sync.</span>question
+        <span class="apidocSignatureSpan">(query, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">question = function (query, options) {
+<span class="apidocCodeCommentSpan">  /* eslint-disable key-spacing */
+</span>  return getValidLine(margeOptions(margeOptions(true, options), {
+    display:            query
+  }));
+  /* eslint-enable key-spacing */
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+* Simple case:
+
+```js
+var readlineSync = require(&#x27;readline-sync&#x27;);
+
+// Wait for user&#x27;s response.
+var userName = readlineSync.<span class="apidocCodeKeywordSpan">question</span>(&#x27;May I have your name? &#x27;);
+console.log(&#x27;Hi &#x27; + userName + &#x27;!&#x27;);
+
+// Handle the secret text (e.g. password).
+var favFood = readlineSync.question(&#x27;What is your favorite food? &#x27;, {
+  hideEchoBack: true // The typed text on screen is hidden by `*` (default).
+});
+console.log(&#x27;Oh, &#x27; + userName + &#x27; loves &#x27; + favFood + &#x27;!&#x27;);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.readline-sync.questionEMail" id="apidoc.element.readline-sync.questionEMail">
+        function <span class="apidocSignatureSpan">readline-sync.</span>questionEMail
+        <span class="apidocSignatureSpan">(query, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">questionEMail = function (query, options) {
+  if (query == null) { query = &#x27;Input e-mail address: &#x27;; }
+<span class="apidocCodeCommentSpan">  /* eslint-disable key-spacing */
+</span>  return exports.question(query, margeOptions({
+    // -------- default
+    hideEchoBack:       false,
+    // http://www.w3.org/TR/html5/forms.html#valid-e-mail-address
+    limit:              /^[a-zA-Z0-9.!#$%&#x26;&#x27;*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA
+-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/,
+    limitMessage:       &#x27;Input valid e-mail address, please.&#x27;,
+    trueValue:          null,
+    falseValue:         null
+  }, options, {
+    // -------- forced
+    keepWhitespace:     false,
+    cd:                 false
+  }));
+  /* eslint-enable key-spacing */
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+[`questionEMail`](#utility_methods-questionemail), [`questionNewPassword`](#utility_methods-questionnewpassword), [`questionInt`](#
+utility_methods-questionint), [`questionFloat`](#utility_methods-questionfloat), [`questionPath`](#utility_methods-questionpath), [`
+promptCL`](#utility_methods-promptcl), [`promptLoop`](#utility_methods-promptloop), [`promptCLLoop`](#utility_methods-promptclloop
+), [`promptSimShell`](#utility_methods-promptsimshell), [`keyInYN`](#utility_methods-keyinyn), [`keyInYNStrict`](#utility_methods
+-keyinynstrict), [`keyInPause`](#utility_methods-keyinpause), [`keyInSelect`](#utility_methods-keyinselect)
+
+These are convenient methods that are extended [Basic Methods](#basic_methods) to be used easily.
+
+### &#x3c;a name=&#x22;utility_methods-questionemail&#x22;&#x3e;&#x3c;/a&#x3e;`questionEMail`
+
+```js
+email = readlineSync.<span class="apidocCodeKeywordSpan">questionEMail</span>([query[, options]])
+```
+
+Display a `query` to the user if it&#x27;s specified, and then accept only a valid e-mail address, and then return it after the
+Enter key was pressed.
+
+The `query` is handled the same as that of the [`question`](#basic_methods-question) method.
+The default value of `query` is `&#x27;Input e-mail address: &#x27;`.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.readline-sync.questionFloat" id="apidoc.element.readline-sync.questionFloat">
+        function <span class="apidocSignatureSpan">readline-sync.</span>questionFloat
+        <span class="apidocSignatureSpan">(query, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">questionFloat = function (query, options) {
+  return _questionNum(query, options, parseFloat);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+&#x3c;tr&#x3e;&#x3c;td&#x3e;&#x3c;a href=&#x22;#basic_options-hideechoback&#x22;&#x3e;&#x3c;code&#x3e;hideEchoBack&#x3c;/code&#x3e
+;&#x3c;/a&#x3e;&#x3c;/td&#x3e;&#x3c;td&#x3e;&#x3c;a href=&#x22;#basic_options-mask&#x22;&#x3e;&#x3c;code&#x3e;mask&#x3c;/code&#x3e
+;&#x3c;/a&#x3e;&#x3c;/td&#x3e;&#x3c;td&#x3e;&#x3c;a href=&#x22;#basic_options-defaultinput&#x22;&#x3e;&#x3c;code&#x3e;defaultInput
+&#x3c;/code&#x3e;&#x3c;/a&#x3e;&#x3c;/td&#x3e;&#x3c;td&#x3e;&#x3c;a href=&#x22;#basic_options-encoding&#x22;&#x3e;&#x3c;code&#x3e
+;encoding&#x3c;/code&#x3e;&#x3c;/a&#x3e;&#x3c;/td&#x3e;&#x3c;td&#x3e;&#x3c;a href=&#x22;#basic_options-buffersize&#x22;&#x3e;&#x3c
+;code&#x3e;bufferSize&#x3c;/code&#x3e;&#x3c;/a&#x3e;&#x3c;/td&#x3e;&#x3c;/tr&#x3e;
+&#x3c;tr&#x3e;&#x3c;td&#x3e;&#x3c;a href=&#x22;#basic_options-print&#x22;&#x3e;&#x3c;code&#x3e;print&#x3c;/code&#x3e;&#x3c;/a&#x3e
+;&#x3c;/td&#x3e;&#x3c;td&#x3e;&#x3c;a href=&#x22;#basic_options-history&#x22;&#x3e;&#x3c;code&#x3e;history&#x3c;/code&#x3e;&#x3c
+;/a&#x3e;&#x3c;/td&#x3e;&#x3c;/tr&#x3e;
+&#x3c;/table&#x3e;
+
+### &#x3c;a name=&#x22;utility_methods-questionfloat&#x22;&#x3e;&#x3c;/a&#x3e;`questionFloat`
+
+```js
+numFloat = readlineSync.<span class="apidocCodeKeywordSpan">questionFloat</span>([query[, options]])
+```
+
+Display a `query` to the user if it&#x27;s specified, and then accept only an input that can be interpreted as a floating-point
+number, and then return the number (not string) after the Enter key was pressed.
+This parses the input as much as possible by `parseFloat()`. For example, it interprets `&#x27;   3.14   &#x27;`, `&#x27;003.1400
+&#x27;`, `&#x27;314e-2&#x27;` and `&#x27;3.14PI&#x27;` as `3.14`.
+
+The `query` is handled the same as that of the [`question`](#basic_methods-question) method.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.readline-sync.questionInt" id="apidoc.element.readline-sync.questionInt">
+        function <span class="apidocSignatureSpan">readline-sync.</span>questionInt
+        <span class="apidocSignatureSpan">(query, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">questionInt = function (query, options) {
+  return _questionNum(query, options, function(value) { return parseInt(value, 10); });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+##### &#x3c;a name=&#x22;utility_methods-questionnewpassword-additional_placeholders-length&#x22;&#x3e;&#x3c;/a&#x3e;`length`
+
+A current value of [`min` and `max`](#utility_methods-questionnewpassword-options-min_max) option that is converted to human readable
+. (e.g. `&#x27;12...24&#x27;`)
+
+### &#x3c;a name=&#x22;utility_methods-questionint&#x22;&#x3e;&#x3c;/a&#x3e;`questionInt`
+
+```js
+numInt = readlineSync.<span class="apidocCodeKeywordSpan">questionInt</span>([query[, options]])
+```
+
+Display a `query` to the user if it&#x27;s specified, and then accept only an input that can be interpreted as an integer, and then
+ return the number (not string) after the Enter key was pressed.
+This parses the input as much as possible by `parseInt()`. For example, it interprets `&#x27;   5   &#x27;`, `&#x27;5.6&#x27;`, `&#
+x27;005&#x27;`, `&#x27;5files&#x27;`, `&#x27;5kb&#x27;` and `&#x27;5px&#x27;` as `5`.
+
+The `query` is handled the same as that of the [`question`](#basic_methods-question) method.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.readline-sync.questionNewPassword" id="apidoc.element.readline-sync.questionNewPassword">
+        function <span class="apidocSignatureSpan">readline-sync.</span>questionNewPassword
+        <span class="apidocSignatureSpan">(query, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">questionNewPassword = function (query, options) {
+<span class="apidocCodeCommentSpan">  /* eslint-disable key-spacing */
+</span>  var resCharlist, min, max,
+    readOptions = margeOptions({
+      // -------- default
+      hideEchoBack:       true,
+      mask:               &#x27;*&#x27;,
+      limitMessage:       &#x27;It can include: $&#x3c;charlist&#x3e;\n&#x27; +
+                            &#x27;And the length must be: $&#x3c;length&#x3e;&#x27;,
+      trueValue:          null,
+      falseValue:         null,
+      caseSensitive:      true
+    }, options, {
+      // -------- forced
+      history:            false,
+      cd:                 false,
+      // limit (by charlist etc.),
+      phContent: function(param) {
+        return param === &#x27;charlist&#x27; ? resCharlist.text :
+          param === &#x27;length&#x27; ? min + &#x27;...&#x27; + max : null;
+      }
+    }),
+    // added:     charlist, min, max, confirmMessage, unmatchMessage
+    charlist, confirmMessage, unmatchMessage,
+    limit, limitMessage, res1, res2;
+  /* eslint-enable key-spacing */
+  options = options || {};
+
+  charlist = replacePlaceholder(
+    options.charlist ? options.charlist + &#x27;&#x27; : &#x27;$&#x3c;!-~&#x3e;&#x27;, getPhCharlist);
+  if (isNaN(min = parseInt(options.min, 10)) || typeof min !== &#x27;number&#x27;) { min = 12; }
+  if (isNaN(max = parseInt(options.max, 10)) || typeof max !== &#x27;number&#x27;) { max = 24; }
+  limit = new RegExp(&#x27;^[&#x27; + escapePattern(charlist) +
+    &#x27;]{&#x27; + min + &#x27;,&#x27; + max + &#x27;}$&#x27;);
+  resCharlist = array2charlist([charlist], readOptions.caseSensitive, true);
+  resCharlist.text = joinChunks(resCharlist.values, resCharlist.suppressed);
+
+  confirmMessage = options.confirmMessage != null ? options.confirmMessage :
+    &#x27;Reinput a same one to confirm it: &#x27;;
+  unmatchMessage = options.unmatchMessage != null ? options.unmatchMessage :
+    &#x27;It differs from first one.&#x27; +
+      &#x27; Hit only the Enter key if you want to retry from first one.&#x27;;
+
+  if (query == null) { query = &#x27;Input new password: &#x27;; }
+
+  limitMessage = readOptions.limitMessage;
+  while (!res2) {
+    readOptions.limit = limit;
+    readOptions.limitMessage = limitMessage;
+    res1 = exports.question(query, readOptions);
+
+    readOptions.limit = [res1, &#x27;&#x27;];
+    readOptions.limitMessage = unmatchMessage;
+    res2 = exports.question(confirmMessage, readOptions);
+  }
+
+  return res1;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+&#x3c;tr&#x3e;&#x3c;td&#x3e;&#x3c;a href=&#x22;#basic_options-mask&#x22;&#x3e;&#x3c;code&#x3e;mask&#x3c;/code&#x3e;&#x3c;/a&#x3e
+;&#x3c;/td&#x3e;&#x3c;td&#x3e;&#x3c;a href=&#x22;#basic_options-defaultinput&#x22;&#x3e;&#x3c;code&#x3e;defaultInput&#x3c;/code&#
+x3e;&#x3c;/a&#x3e;&#x3c;/td&#x3e;&#x3c;td&#x3e;&#x3c;a href=&#x22;#basic_options-casesensitive&#x22;&#x3e;&#x3c;code&#x3e;caseSensitive
+&#x3c;/code&#x3e;&#x3c;/a&#x3e;&#x3c;/td&#x3e;&#x3c;td&#x3e;&#x3c;a href=&#x22;#basic_options-encoding&#x22;&#x3e;&#x3c;code&#x3e
+;encoding&#x3c;/code&#x3e;&#x3c;/a&#x3e;&#x3c;/td&#x3e;&#x3c;td&#x3e;&#x3c;a href=&#x22;#basic_options-buffersize&#x22;&#x3e;&#x3c
+;code&#x3e;bufferSize&#x3c;/code&#x3e;&#x3c;/a&#x3e;&#x3c;/td&#x3e;&#x3c;/tr&#x3e;
+&#x3c;tr&#x3e;&#x3c;td&#x3e;&#x3c;a href=&#x22;#basic_options-print&#x22;&#x3e;&#x3c;code&#x3e;print&#x3c;/code&#x3e;&#x3c;/a&#x3e
+;&#x3c;/td&#x3e;&#x3c;td&#x3e;&#x3c;a href=&#x22;#basic_options-history&#x22;&#x3e;&#x3c;code&#x3e;history&#x3c;/code&#x3e;&#x3c
+;/a&#x3e;&#x3c;/td&#x3e;&#x3c;/tr&#x3e;
+&#x3c;/table&#x3e;
+
+### &#x3c;a name=&#x22;utility_methods-questionnewpassword&#x22;&#x3e;&#x3c;/a&#x3e;`questionNewPassword`
+
+```js
+password = readlineSync.<span class="apidocCodeKeywordSpan">questionNewPassword</span>([query[, options]])
+```
+
+Display a `query` to the user if it&#x27;s specified, and then accept only a valid password, and then request same one again, and
+ then return it after the Enter key was pressed.
+It&#x27;s the password, or something that is the secret text like the password.
+You can specify the valid password requirement to the options.
+
+The `query` is handled the same as that of the [`question`](#basic_methods-question) method.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.readline-sync.questionPath" id="apidoc.element.readline-sync.questionPath">
+        function <span class="apidocSignatureSpan">readline-sync.</span>questionPath
+        <span class="apidocSignatureSpan">(query, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">questionPath = function (query, options) {
+<span class="apidocCodeCommentSpan">  /* eslint-disable key-spacing */
+</span>  var validPath, error = &#x27;&#x27;,
+    readOptions = margeOptions({
+      // -------- default
+      hideEchoBack:       false,
+      limitMessage:       &#x27;$&#x3c;error(\n)&#x3e;Input valid path, please.&#x27; +
+                            &#x27;$&#x3c;( Min:)min&#x3e;$&#x3c;( Max:)max&#x3e;&#x27;,
+      history:            true,
+      cd:                 true
+    }, options, {
+      // -------- forced
+      keepWhitespace:     false,
+      limit: function(value) {
+        var exists, stat, res;
+        value = replaceHomePath(value, true);
+        error = &#x27;&#x27;; // for validate
+        // mkdir -p
+        function mkdirParents(dirPath) {
+          dirPath.split(/\/|\\/).reduce(function(parents, dir) {
+            var path = pathUtil.resolve((parents += dir + pathUtil.sep));
+            if (!fs.existsSync(path)) {
+              fs.mkdirSync(path);
+            } else if (!fs.statSync(path).isDirectory()) {
+              throw new Error(&#x27;Non directory already exists: &#x27; + path);
+            }
+            return parents;
+          }, &#x27;&#x27;);
+        }
+
+        try {
+          exists = fs.existsSync(value);
+          validPath = exists ? fs.realpathSync(value) : pathUtil.resolve(value);
+          // options.exists default: true, not-bool: no-check
+          if (!options.hasOwnProperty(&#x27;exists&#x27;) &#x26;&#x26; !exists ||
+              typeof options.exists === &#x27;boolean&#x27; &#x26;&#x26; options.exists !== exists) {
+            error = (exists ? &#x27;Already exists&#x27; : &#x27;No such file or directory&#x27;) +
+              &#x27;: &#x27; + validPath;
+            return false;
+          }
+          if (!exists &#x26;&#x26; options.create) {
+            if (options.isDirectory) {
+              mkdirParents(validPath);
+            } else {
+              mkdirParents(pathUtil.dirname(validPath));
+              fs.closeSync(fs.openSync(validPath, &#x27;w&#x27;)); // touch
+            }
+            validPath = fs.realpathSync(validPath);
+          }
+          if (exists &#x26;&#x26; (options.min || options.max ||
+              options.isFile || options.isDirectory)) {
+            stat = fs.statSync(validPath);
+            // type check first (directory has zero size)
+            if (options.isFile &#x26;&#x26; !stat.isFile()) {
+              error = &#x27;Not file: &#x27; + validPath;
+              return false;
+            } else if (options.isDirectory &#x26;&#x26; !stat.isDirectory()) {
+              error = &#x27;Not directory: &#x27; + validPath;
+              return false;
+            } else if (options.min &#x26;&#x26; stat.size &#x3c; +options.min ||
+                options.max &#x26;&#x26; stat.size &#x3e; +options.max) {
+              error = &#x27;Size &#x27; + stat.size + &#x27; is out of range: &#x27; + validPath;
+              return false;
+            }
+          }
+          if (typeof options.validate === &#x27;function&#x27; &#x26;&#x26;
+              (res = options.validate(validPath)) !== true) {
+            if (typeof res === &#x27;string&#x27;) { error = res; }
+            return false;
+          }
+        } catch (e) {
+          error = e + &#x27;&#x27;;
+          return false;
+        }
+        return true;
+      },
+      // trueValue, falseValue, caseSensitive don&#x27;t work.
+      phContent: function(param) {
+        return param === &#x27;error&#x27; ? error :
+          param !== &#x27;min&#x27; &#x26;&#x26; param !== &#x27;max&#x27; ? null :
+          options.hasOwnProperty(param) ? options[param] + &#x27;&#x27; : &#x27;&#x27;;
+      }
+    });
+    // added:     exists, create, min, max, isFile, isDirectory, validate
+  /* eslint-enable key-spacing */
+  options = options || {};
+
+  if (query == null) { query = &#x27;Input path (you can &#x22;cd&#x22; and &#x22;pwd&#x22;): &#x27;; }
+
+  exports.question(query, readOptions);
+  return validPath;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+When these were input, do not return, and wait for reinput.
+
+For example:
+
+```js
+while (true) {
+  file = readlineSync.<span class="apidocCodeKeywordSpan">questionPath</span>(&#x27;File: &#x27;);
+  console.log(&#x27;-- Specified file is &#x27; + file);
+}
+```
+
+```console
+File: cd foo-dir/bar-dir
+File: pwd
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.readline-sync.setBufferSize" id="apidoc.element.readline-sync.setBufferSize">
+        function <span class="apidocSignatureSpan">readline-sync.</span>setBufferSize
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setBufferSize = function () { return _setOption(&#x27;bufferSize&#x27;, arguments); }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```js
+readlineSync.setDefaultOptions({bufferSize: value});
+```
+
+instead of:
+
+```js
+readlineSync.<span class="apidocCodeKeywordSpan">setBufferSize</span>(value);
+```
+
+### &#x3c;a name=&#x22;deprecated_methods_and_options-noechoback_option&#x22;&#x3e;&#x3c;/a&#x3e;`noEchoBack` option
+
+Use [`hideEchoBack`](README.md#basic_options-hideechoback) option instead of it.
+
+### &#x3c;a name=&#x22;deprecated_methods_and_options-notrim_option&#x22;&#x3e;&#x3c;/a&#x3e;`noTrim` option
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.readline-sync.setDefaultOptions" id="apidoc.element.readline-sync.setDefaultOptions">
+        function <span class="apidocSignatureSpan">readline-sync.</span>setDefaultOptions
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setDefaultOptions = function (options) {
+  defaultOptions = margeOptions(true, options);
+  return margeOptions(true); // copy
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+### &#x3c;a name=&#x22;deprecated_methods_and_options-setprint_method&#x22;&#x3e;&#x3c;/a&#x3e;`setPrint` method
+
+Use the [`print`](README.md#basic_options-print) option.
+For the [Default Options](README.md#basic_options), use:
+
+```js
+readlineSync.<span class="apidocCodeKeywordSpan">setDefaultOptions</span>({print: value});
+```
+
+instead of:
+
+```js
+readlineSync.setPrint(value);
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.readline-sync.setEncoding" id="apidoc.element.readline-sync.setEncoding">
+        function <span class="apidocSignatureSpan">readline-sync.</span>setEncoding
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setEncoding = function () { return _setOption(&#x27;encoding&#x27;, arguments); }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```js
+readlineSync.setDefaultOptions({encoding: value});
+```
+
+instead of:
+
+```js
+readlineSync.<span class="apidocCodeKeywordSpan">setEncoding</span>(value);
+```
+
+### &#x3c;a name=&#x22;deprecated_methods_and_options-setmask_method&#x22;&#x3e;&#x3c;/a&#x3e;`setMask` method
+
+Use the [`mask`](README.md#basic_options-mask) option.
+For the [Default Options](README.md#basic_options), use:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.readline-sync.setMask" id="apidoc.element.readline-sync.setMask">
+        function <span class="apidocSignatureSpan">readline-sync.</span>setMask
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setMask = function () { return _setOption(&#x27;mask&#x27;, arguments); }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```js
+readlineSync.setDefaultOptions({mask: value});
+```
+
+instead of:
+
+```js
+readlineSync.<span class="apidocCodeKeywordSpan">setMask</span>(value);
+```
+
+### &#x3c;a name=&#x22;deprecated_methods_and_options-setbuffersize_method&#x22;&#x3e;&#x3c;/a&#x3e;`setBufferSize` method
+
+Use the [`bufferSize`](README.md#basic_options-buffersize) option.
+For the [Default Options](README.md#basic_options), use:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.readline-sync.setPrint" id="apidoc.element.readline-sync.setPrint">
+        function <span class="apidocSignatureSpan">readline-sync.</span>setPrint
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setPrint = function () { return _setOption(&#x27;print&#x27;, arguments); }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```js
+readlineSync.setDefaultOptions({print: value});
+```
+
+instead of:
+
+```js
+readlineSync.<span class="apidocCodeKeywordSpan">setPrint</span>(value);
+```
+
+### &#x3c;a name=&#x22;deprecated_methods_and_options-setprompt_method&#x22;&#x3e;&#x3c;/a&#x3e;`setPrompt` method
+
+Use the [`prompt`](README.md#basic_options-prompt) option.
+For the [Default Options](README.md#basic_options), use:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.readline-sync.setPrompt" id="apidoc.element.readline-sync.setPrompt">
+        function <span class="apidocSignatureSpan">readline-sync.</span>setPrompt
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setPrompt = function () { return _setOption(&#x27;prompt&#x27;, arguments); }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```js
+readlineSync.setDefaultOptions({prompt: value});
+```
+
+instead of:
+
+```js
+readlineSync.<span class="apidocCodeKeywordSpan">setPrompt</span>(value);
+```
+
+### &#x3c;a name=&#x22;deprecated_methods_and_options-setencoding_method&#x22;&#x3e;&#x3c;/a&#x3e;`setEncoding` method
+
+Use the [`encoding`](README.md#basic_options-encoding) option.
+For the [Default Options](README.md#basic_options), use:
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
